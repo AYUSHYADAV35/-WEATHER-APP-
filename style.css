@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+}
+
+.app {
+  width: 100%;
+  max-width: 430px;
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 22px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+h1 {
+  font-size: 32px;
+  color: #1f2937;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: #6b7280;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+}
+
+.search-box input:focus {
+  border-color: #6366f1;
+}
+
+.search-box button {
+  border: none;
+  border-radius: 10px;
+  padding: 0 17px;
+  background: #4f46e5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background: #4338ca;
+}
+
+.message {
+  margin-top: 18px;
+  color: #6b7280;
+  min-height: 20px;
+}
+
+.weather-result {
+  margin-top: 22px;
+  padding: 22px;
+  border-radius: 16px;
+  background: #f3f4f6;
+}
+
+.hidden {
+  display: none;
+}
+
+#cityName {
+  font-size: 25px;
+  color: #111827;
+}
+
+.temperature {
+  margin: 12px 0 4px;
+  font-size: 52px;
+  font-weight: bold;
+  color: #4f46e5;
+}
+
+#condition {
+  text-transform: capitalize;
+  color: #4b5563;
+  font-size: 18px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.details > div {
+  background: white;
+  border-radius: 12px;
+  padding: 14px 8px;
+}
+
+.label {
+  display: block;
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 5px;
+}
+
+.details strong {
+  color: #111827;
+}
+
+.api-note {
+  margin-top: 22px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+@media (max-width: 420px) {
+  .weather-card {
+    padding: 22px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box button {
+    padding: 13px;
+  }
+}
